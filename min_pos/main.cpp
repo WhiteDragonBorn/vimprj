@@ -10,9 +10,9 @@ using std::cout;
 
 int *mem_alloc(const int);
 void free_mem(int *&);
-void print_arr(int *, int *);
+void print_arr(int *, const int *);
 void print_arr(int *, const int);
-void fill(int *, const int, int, int);
+void fill(int *, const int, const int, const int);
 int *find_min_or_max(int *, const int, 
                     std::function<bool(int, int)>);
 
@@ -50,6 +50,7 @@ int main()
     int m_arr_max = find_min_or_max(m_arr, size, [](int x, int y)
                                     { return x > y; }) -
                     m_arr;
+
     cout << "Min: " << m_arr_min << "  " << "Max: " << m_arr_max << std::endl;
 
     free_mem(m_arr);
@@ -68,7 +69,7 @@ void free_mem(int *&arr)
 }
 
 // begin = arr, end = arr + size
-void print_arr(int *begin, int *end)
+void print_arr(int *begin, const int *end)
 {
     // end = arr + size
     for (int *ptr = begin; ptr < end; ++ptr)
@@ -89,7 +90,7 @@ void print_arr(int *arr, const int size)
 }
 
 // fill with numbers in [A, B]
-void fill(int *arr, const int size, int A, int B)
+void fill(int *arr, const int size, const int A, const int B)
 {
     srand(GetTickCount());
     for (size_t i = 0; i < size; ++i)
