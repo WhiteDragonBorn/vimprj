@@ -10,25 +10,25 @@ using namespace std;
 // // const int *a --- защита данных от изменения
 // void print(int*a);
 
-// void print1(int* arr, const int  size)
-// {
-//     for (int* ptr = arr; ptr < arr+size; ++ptr)
-//     {
+void print1(int* arr, const int  size)
+{
+    for (int* ptr = arr; ptr < arr+size; ++ptr)
+    {
         
-//         cout << *ptr;
-//     }
+        cout << *ptr;
+    }
     
-// }
-// void print2(int* begin, int* end)
-// {
-//     // end = arr + size
-//     for (int* ptr = begin; ptr != end; ++ptr)
-//     {
+}
+void print2(int* begin, int* end)
+{
+    // end = arr + size
+    for (int* ptr = begin; ptr != end; ++ptr)
+    {
         
-//         cout << *ptr;
-//     }
+        cout << *ptr;
+    }
     
-// }
+}
 
 int * memory_allocation( const int size)
 {
