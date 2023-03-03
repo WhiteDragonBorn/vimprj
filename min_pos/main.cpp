@@ -1,12 +1,14 @@
 #include <iostream>
 #include <Windows.h>
 #include <functional>
+#include <string>
 
 using std::cin;
 using std::cout;
 
-// Программа должна создавать массив указанного размера со случайными числами в заданном диапазоне
-// и найти в нем индекс первого минимального и максимального элементов.
+// Программа должна создавать массив указанного размера со случайными числами в 
+// заданном диапазоне и найти в нем индекс первого минимального и максимального 
+// элементов
 
 int *mem_alloc(const int);
 void free_mem(int *&);
@@ -19,7 +21,7 @@ int *find_min_or_max(int *, const int,
 int main()
 {
     setlocale(LC_ALL, "Russian");
-
+   
     unsigned int size;
 
     cout << "Размер массива: ";
